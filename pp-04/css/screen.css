@@ -22,6 +22,13 @@ body {
 
 
 /* ===== MODULAR STYLES ===== */
-
+button:hover {
+  cursor: pointer;
+  background-color: blue;
+}
 
 /* ===== STATE STYLES ===== */
+
+audio {
+  display: none;
+}
