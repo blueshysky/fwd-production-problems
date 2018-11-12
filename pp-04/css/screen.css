@@ -29,6 +29,6 @@ button:hover {
 
 /* ===== STATE STYLES ===== */
 
-audio {
+.hide {
   display: none;
 }
