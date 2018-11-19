@@ -2,15 +2,17 @@
 //  outputs the correct value for x (5) even after double(6) is
 //  called:
 
-var x = 5;
+  var x = 5;
 
 function double(num) {
-  x = num * 2;
-  return x;
-}
+  var x = num * 2;
+   return x;
+};
 
+(function self(){
 double(6);
-console.log('The value of x is:', x, 'It should be 5.');
+console.log('The value of x is:', x , 'It should be 5.');
+})();
 
 //  2. Rewrite the corrected JavaScript above as a self-executing
 //  anonymous function that does not pollute the global
@@ -23,9 +25,11 @@ console.log('The value of x is:', x, 'It should be 5.');
 //  the global scope:
 
 function arrayEach(array, func) {
+  var i = 0;
   for (i = 0; i < array.length; i++) {
     func(array[i]);
   }
+
 }
 
 arrayEach(['red','green','blue'], console.log);
@@ -35,6 +39,8 @@ console.log(i) // should be 'undefined', not 3
 //  4. Explain why this function does not modify the global
 //  variable x declared on line 5 above. Write your explanation
 //  as JavaScript comments.
+// this isn't affecting the global var x is because the x is local to the function
+// so only the function and nested function can use that var if the
 
 function addTwo(x) {
   x = x + 2;
